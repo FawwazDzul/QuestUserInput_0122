@@ -90,3 +90,15 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
             color = Color.DarkGray
         )
 
+        Button(
+            modifier = Modifier.fillMaxWidth(fraction = 1f),
+            // tombol aktif jika alamat sudah diisi
+            enabled = textAlamat.isNotEmpty(),
+            onClick = {
+                nama = textNama
+                jenis = textJK
+                alamat = textAlamat
+            }
+        ) {
+            Text(stringResource(id = R.string.submit))
+        }
